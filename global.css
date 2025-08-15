@@ -38,9 +38,9 @@ main,
     width: 100%;
     top: 50px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 70px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     animation: fadeIn 1s ease-out forwards;
     transition: transform 0.7s ease-out, opacity 0.7s ease-out;
 }
@@ -284,7 +284,7 @@ Footer {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         background-image:
             linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.80)),
-            url("assets/img/ssru-header.jpg");
+            url("assets/img/ssru-header.gif");
     }
 
     .sidebar .logo {
