@@ -1,7 +1,12 @@
 
 // category toggle
 document.addEventListener('DOMContentLoaded', () => {
-    if (/(?:^|\/)categories(?:\/|$)/.test(location.pathname) && window.matchMedia('(min-width: 769px)').matches) {
+    const p = location.pathname;
+    const isCat  = /(?:^|\/)categories(?:\/|$)/.test(p);
+    const isShop = /(?:^|\/)shop(?:\/|$)/.test(p);
+    const isWide = window.matchMedia('(min-width: 769px)').matches;
+
+    if ((isCat || isShop) && isWide) {
         console.log(location.pathname);
         const btn = document.querySelector('.food-category-btn');
         const panel = document.querySelector('.food-category-content');
@@ -22,4 +27,3 @@ document.addEventListener('click', (e) => {
     const isOpen = panel.classList.toggle('show');
     btn.classList.toggle('active', isOpen);
 });
-
