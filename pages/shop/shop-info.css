@@ -52,17 +52,17 @@
 }
 
 .card-menu-text-content{
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .card-menu-text-product{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .card-menu-text-price{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 @media (max-width: 768px) {
