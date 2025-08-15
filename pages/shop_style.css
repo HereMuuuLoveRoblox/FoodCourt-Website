@@ -7,26 +7,30 @@
     min-height: 790px;
     background-color: white;
     border-radius: 15px;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
     padding: 50px;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
 }
 
 /* shop */
 .shop-content{
-    width: 255px;
-    height: 230px;
+    width: 300px;
+    height: 270px;
     border-radius: 13px;
     box-shadow: 1px 4px 15px rgba(0,0,0,.25);
     animation: slide-in 0.5s ease-out forwards;
     transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    overflow: hidden;
 }
 
 .shop-text{
     padding: 15px;
     position: relative;
+    transition: color 0.3s ease-out;
 }
 .shop-img{
     width: 100%;
@@ -35,18 +39,20 @@
 }
 
 .detail-btn{
-    position: absolute;
-    right: 15px;
-    bottom: -15px;
-    display: inline-block;
-    background-color: var(--main-color);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: background-color 0.2s;
+    text-decoration: none;  /* เอาเส้นใต้ลิงก์ออก */
+    color: inherit;         /* ใช้สีตาม parent */
+    display: block;         /* ให้คลิกได้ทั้งบล็อก */
+    cursor: pointer;
+    transition: transform 0.7s ease-out;
+}
+
+.detail-btn:hover{
+    transform: scale(1.05); /* ขยายขนาดเมื่อ hover */
+}
+
+.detail-btn:hover .shop-text h2,
+.detail-btn:focus-visible .shop-text h2{
+    color: var(--main-color); /* เปลี่ยนสีข้อความเมื่อ hover/focus */
 }
 
 /* End Main */
@@ -55,17 +61,24 @@
 @media (max-width: 768px) {
     
     /* Main */
-    .main-container{
+    .main-content{
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .shop-content{
         width: 100%;
-        height: 250px;
+        height: 200px;
         border-radius: 13px;
         box-shadow: 1px 4px 15px rgba(0,0,0,.25);
         position: relative;
         overflow:hidden;   
+    }
+
+    .shop-text h2{
+       font-size: 18px;
+    }
+    .shop-text p{
+       font-size: 14px;
     }
 
     .shop-img{
@@ -73,10 +86,4 @@
         height: auto;
         border-radius: 13px;
     }
-    .detail-btn{
-        bottom: 15px;
-        padding: 15px;
-        position: fixed;
-    }
-
 }

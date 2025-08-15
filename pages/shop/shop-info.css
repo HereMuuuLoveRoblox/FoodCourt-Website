@@ -1,0 +1,91 @@
+.main-img-shop{
+    width: 100%;
+    height: 250px;          /* สูงคงที่ */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;      /* เผื่อจะวางตัวหนังสือซ้อน */
+    /* ไม่ต้องใช้ flex สำหรับเคสนี้ */
+}
+
+.main-img-shop img{
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;       /* เติมเต็มกล่อง โดยไม่บิดเบี้ยว (มีครอปนิดหน่อย) */
+    object-position: center; /* โฟกัสกลางภาพ */
+    display: block; 
+    animation: slide-in 0.5s ease-out;
+    transition: transform 0.7s ease-in-out;
+}
+
+.main-img-shop img:hover{
+    transform: scale(1.1); /* ขยายขนาดเมื่อ hover */
+}   
+
+.main-text-shop{
+    display: flex;
+    font-size: 36px;
+    justify-content: center;
+    text-align: center;
+    color: var(--main-color);
+    padding: 10px;
+}
+
+.card-menu{
+    width: 300px;
+    height: 270px;
+    border-radius: 13px;
+    box-shadow: 1px 4px 15px rgba(0,0,0,.25);
+    animation: slide-in 0.5s ease-out;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    overflow: hidden;
+}
+
+.card-menu:hover{
+    transform: scale(1.05); /* ขยายขนาดเมื่อ hover */
+}   
+
+.card-menu-img{
+    width: 100%;
+    height: 200px;
+}
+
+.card-menu-text-content{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-menu-text-product{
+    font-size: 24px;
+}
+
+.card-menu-text-price{
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    
+    .card-menu{
+        width: 100%;
+        height: 230px;
+    }
+
+    .card-menu-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-menu-text-content{
+        display: block;
+        text-align: center;
+    }
+
+    .main-img-shop{
+        display: none;
+    }
+
+    .main-text-shop{
+        margin-top: 30px;
+    }
+
+}
