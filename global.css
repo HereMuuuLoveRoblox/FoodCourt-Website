@@ -96,6 +96,7 @@ main,
 }
 
 .sidebar .menu ul li a:hover {
+    
     color: var(--main-color);
 }
 
@@ -347,5 +348,9 @@ Footer {
     
     .back-page-btn{
         margin-left: -20px;
+    }
+
+    .icon-category img {
+        content: url("../assets/icon/Arrow-white.png");
     }
 }
