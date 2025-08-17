@@ -19,38 +19,16 @@
 }
 
 .card-popular-category{
-  position: relative;
-  width: 250px;
-  height: 200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.5);
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: black;
-
-  /* ค่าเริ่มต้น (fallback) */
-  opacity: 0;
-  transform: scale(0.96);
-  will-change: opacity, transform;
-}
-
-/* ถ้าเบราว์เซอร์รองรับ scroll-driven animation */
-@supports (animation-timeline: view()) {
-  .card-popular-category{
-    animation: appear 0.7s linear both; /* both เพื่อให้ค่าสไตล์ต้นทาง/ปลายทางคงอยู่ */
+    position: relative;
+    width: 250px;    /* ให้กว้างเท่ากับคอลัมน์พอดี */
+    height: 200px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,.5);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: black;
+    animation: appear 0.7s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
-    opacity: 1;              /* ป้องกันกระพริบตอนคำนวณ timeline */
-    transform: none;
-  }
-}
-
-/* ตัวเลือกเสริม: Safari บางเวอร์ชันชอบ syntax ตั้งชื่อ timeline เอง */
-@supports (view-timeline-name: --v) {
-  .card-popular-category{
-    view-timeline-name: --card;
-    view-timeline-axis: block;
-    animation-timeline: --card;  /* ใช้ชื่อแทน view() */
-  }
 }
 
 .popular-category-img{
