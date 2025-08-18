@@ -94,53 +94,55 @@ document.addEventListener("DOMContentLoaded", () => {
             { img: "A8-Menu6.png", name: "ข้าวเปล่า", price: "10" }
         ],
         B1: [
-            { img: "B1-Menu1.png", name: "ข้าวขาหมู", price: "55 บาท" },
-            { img: "B1-Menu2.png", name: "ข้าวหมูกรอบ", price: "55 บาท" }
+            { img: "B1-Menu1.png", name: "ข้าวขาหมู", price: "55" },
+            { img: "B1-Menu2.png", name: "ข้าวหมูกรอบ", price: "55" }
         ],
         B2: [
-            { img: "B2-Menu1.png", name: "ข้าวแกงเขียวหวานไก่", price: "50 บาท" },
-            { img: "B2-Menu2.png", name: "ข้าวแกงเผ็ดหมู", price: "50 บาท" }
+            { img: "B2-Menu1.png", name: "ข้าวแกงเขียวหวานไก่", price: "50" },
+            { img: "B2-Menu2.png", name: "ข้าวแกงเผ็ดหมู", price: "50" }
         ],
 
         C1: [
-            { img: "C1-Menu1.png", name: "พิซซ่าหน้าแฮม", price: "79 บาท" },
-            { img: "C1-Menu2.png", name: "พิซซ่าหน้าทะเล", price: "89 บาท" },
-            { img: "C1-Menu3.png", name: "พิซซ่าหน้าไก่", price: "75 บาท" }
+            { img: "C1-Menu1.png", name: "พิซซ่าหน้าแฮม", price: "79" },
+            { img: "C1-Menu2.png", name: "พิซซ่าหน้าทะเล", price: "89" },
+            { img: "C1-Menu3.png", name: "พิซซ่าหน้าไก่", price: "75" }
         ],
         C2: [
-            { img: "C2-Menu1.png", name: "แฮมเบอร์เกอร์หมู", price: "65 บาท" },
-            { img: "C2-Menu2.png", name: "เบอร์เกอร์ไก่", price: "65 บาท" }
+            { img: "C2-Menu1.png", name: "แฮมเบอร์เกอร์หมู", price: "65" },
+            { img: "C2-Menu2.png", name: "เบอร์เกอร์ไก่", price: "65" }
         ],
         C3: [
-            { img: "C3-Menu1.png", name: "เฟรนช์ฟรายส์", price: "35 บาท" }
+            { img: "C3-Menu1.png", name: "เฟรนช์ฟรายส์", price: "35" }
         ],
 
         D1: [
-            { img: "D1-Menu1.png", name: "ชาเย็น", price: "25 บาท" },
-            { img: "D1-Menu2.png", name: "ชามะนาว", price: "25 บาท" },
-            { img: "D1-Menu3.png", name: "ชาเขียว", price: "25 บาท" }
+            { img: "D1-Menu1.png", name: "ชาเย็น", price: "25" },
+            { img: "D1-Menu2.png", name: "ชามะนาว", price: "25" },
+            { img: "D1-Menu3.png", name: "ชาเขียว", price: "25" }
         ],
 
         E1: [
-            { img: "E1-Menu1.png", name: "เค้กช็อกโกแลต", price: "40 บาท" },
-            { img: "E1-Menu2.png", name: "เค้กส้ม", price: "40 บาท" },
-            { img: "E1-Menu3.png", name: "บราวนี่", price: "35 บาท" }
+            { img: "E1-Menu1.png", name: "เค้กช็อกโกแลต", price: "40" },
+            { img: "E1-Menu2.png", name: "เค้กส้ม", price: "40" },
+            { img: "E1-Menu3.png", name: "บราวนี่", price: "35" }
         ],
         E2: [
-            { img: "E2-Menu1.png", name: "ไอศกรีมวนิลา", price: "30 บาท" },
-            { img: "E2-Menu2.png", name: "ไอศกรีมช็อกโกแลต", price: "30 บาท" },
-            { img: "E2-Menu3.png", name: "ไอศกรีมสตรอว์เบอร์รี่", price: "30 บาท" }
+            { img: "E2-Menu1.png", name: "ไอศกรีมวนิลา", price: "30" },
+            { img: "E2-Menu2.png", name: "ไอศกรีมช็อกโกแลต", price: "30" },
+            { img: "E2-Menu3.png", name: "ไอศกรีมสตรอว์เบอร์รี่", price: "30" }
         ],
 
         F1: [
-            { img: "F1-Menu1.png", name: "ส้มตำปู", price: "45 บาท" },
-            { img: "F1-Menu2.png", name: "ส้มตำไทยไข่เค็ม", price: "50 บาท" },
-            { img: "F1-Menu3.png", name: "ส้มตำปูม้า", price: "60 บาท" }
+            { img: "F1-Menu1.png", name: "ส้มตำปู", price: "45" },
+            { img: "F1-Menu2.png", name: "ส้มตำไทยไข่เค็ม", price: "50" },
+            { img: "F1-Menu3.png", name: "ส้มตำปูม้า", price: "60" }
         ],
         F2: [
-            { img: "F2-Menu1.png", name: "ลาบหมู", price: "50 บาท" },
-            { img: "F2-Menu2.png", name: "ลาบไก่", price: "50 บาท" },
-            { img: "F2-Menu3.png", name: "น้ำตกหมู", price: "55 บาท" }
+            { img: "F2-Menu1.png", name: "ลาบหมู", price: "50" },
+            { img: "F2-Menu2.png", name: "ลาบไก่", price: "50" },
+            { img: "F2-Menu3.png", name: "น้ำตกหมู", price: "55" },
+            { img: "F2-Menu4.png", name: "น้ำตกหมู", price: "55" },
+            { img: "F2-Menu5.png", name: "วาฟเฟิลช็อคโกแลต", price: "55" }
         ]
     };
 
