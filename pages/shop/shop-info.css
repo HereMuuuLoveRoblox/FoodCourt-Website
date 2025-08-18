@@ -59,6 +59,12 @@
     justify-content: space-between;
 }
 
+.card-menu-text-content.noprice{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
 .card-menu-text-product{
     text-align: start;
     font-size: 22px;

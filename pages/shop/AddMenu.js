@@ -11,12 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // func สร้าง card
     function createCard(img, name, price) {
+        
+        if (price === "-") {
+            return `
+                <div class="card-menu">
+                    <img class="card-menu-img" src="menu/${img}" alt="${name}" loading="lazy">
+                    <div class="card-menu-text-content noprice">
+                        <p class="card-menu-text-product">${name}</p>
+                    </div>
+                </div>
+            `;
+        }
+
         return `
             <div class="card-menu">
                 <img class="card-menu-img" src="menu/${img}" alt="${name}" loading="lazy">
                 <div class="card-menu-text-content">
-                <p class="card-menu-text-product">${name}</p>
-                <p class="card-menu-text-price">${price} บาท</p>
+                    <p class="card-menu-text-product">${name}</p>
+                    <p class="card-menu-text-price">${price} บาท</p>
                 </div>
             </div>
         `;
@@ -24,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // menus data
     const menus = {
-        A1: [
+         A1: [
             { img: "A1-Menu1.png", name: "ข้าวหน้าหมู", price: "45" },
             { img: "A1-Menu2.png", name: "ข้าวแกงกะหรี่", price: "45" },
             { img: "A1-Menu3.png", name: "ข้าวน้ำตกไก่ย่าง", price: "45" },
@@ -90,59 +102,90 @@ document.addEventListener("DOMContentLoaded", () => {
             { img: "A8-Menu2.png", name: "ข้าวขาหมู+ไส้", price: "50" },
             { img: "A8-Menu3.png", name: "ข้าวหมูแดง", price: "50" },
             { img: "A8-Menu4.png", name: "ข้าวหมูกรอบ", price: "50" },
-            { img: "A8-Menu5.png", name: "ข้าวหมูแดง", price: "50" },
-            { img: "A8-Menu6.png", name: "ข้าวเปล่า", price: "10" }
         ],
         B1: [
-            { img: "B1-Menu1.png", name: "ข้าวขาหมู", price: "55" },
-            { img: "B1-Menu2.png", name: "ข้าวหมูกรอบ", price: "55" }
+            { img: "B1-Menu1.png", name: "1 อย่าง", price: "35" },
+            { img: "B1-Menu2.png", name: "2 อย่าง", price: "40" },
+            { img: "B1-Menu3.png", name: "ไข่พะโล้", price: "25" },
+            { img: "B1-Menu4.png", name: "พะแนงไก่", price: "25" },
+            { img: "B1-Menu5.png", name: "แกงเขียวหวาน", price: "25" },
+            { img: "B1-Menu6.png", name: "ไข่ต้ม", price: "10" },
+            { img: "B1-Menu7.png", name: "ปลาทู", price: "30" }
         ],
         B2: [
-            { img: "B2-Menu1.png", name: "ข้าวแกงเขียวหวานไก่", price: "50" },
-            { img: "B2-Menu2.png", name: "ข้าวแกงเผ็ดหมู", price: "50" }
+            { img: "B2-Menu1.png", name: "1 อย่าง", price: "35" },
+            { img: "B2-Menu2.png", name: "2 อย่าง", price: "40" },
+            { img: "B2-Menu3.png", name: "กะเพราหมู", price: "25" },
+            { img: "B2-Menu4.png", name: "ผัดสะตอกุ้ง", price: "25" },
+            { img: "B2-Menu5.png", name: "ต้มจืด", price: "25" },
+            { img: "B2-Menu6.png", name: "ไข่ดาว", price: "10" },
+            { img: "B2-Menu7.png", name: "ทอดมัน", price: "20" }
         ],
 
         C1: [
-            { img: "C1-Menu1.png", name: "พิซซ่าหน้าแฮม", price: "79" },
-            { img: "C1-Menu2.png", name: "พิซซ่าหน้าทะเล", price: "89" },
-            { img: "C1-Menu3.png", name: "พิซซ่าหน้าไก่", price: "75" }
+            { img: "C1-Menu1.png", name: "ต้มยำ", price: "50" },
+            { img: "C1-Menu2.png", name: "น้ำตก", price: "50" },
+            { img: "C1-Menu3.png", name: "น้ำใส", price: "40" },
+            { img: "C1-Menu4.png", name: "ต้มยำแห้ง", price: "50" },
+            { img: "C1-Menu5.png", name: "เกาเหลาต้มยำ", price: "50" }
         ],
         C2: [
-            { img: "C2-Menu1.png", name: "แฮมเบอร์เกอร์หมู", price: "65" },
-            { img: "C2-Menu2.png", name: "เบอร์เกอร์ไก่", price: "65" }
+            { img: "C2-Menu1.png", name: "ไก่ฉีก", price: "40" },
+            { img: "C2-Menu2.png", name: "น่องไก่", price: "40" },
+            { img: "C2-Menu3.png", name: "ไกฉีก+ไข่ต้ม", price: "50" },
+            { img: "C2-Menu4.png", name: "ไก่ฉีก+น่องไก่", price: "50" },
+            { img: "C2-Menu5.png", name: "น่องไก่ 2", price: "60" }
         ],
         C3: [
-            { img: "C3-Menu1.png", name: "เฟรนช์ฟรายส์", price: "35" }
+            { img: "C3-Menu1.png", name: "เนื้อสด", price: "50" },
+            { img: "C3-Menu2.png", name: "เนื้อเปื่อย", price: "60" },
+            { img: "C3-Menu3.png", name: "เนื้อสด+เปื่อย", price: "60" },
+            { img: "C3-Menu4.png", name: "เกาเหลาเนื้อเปื่อย", price: "70" }
         ],
 
         D1: [
-            { img: "D1-Menu1.png", name: "ชาเย็น", price: "25" },
-            { img: "D1-Menu2.png", name: "ชามะนาว", price: "25" },
-            { img: "D1-Menu3.png", name: "ชาเขียว", price: "25" }
+            { img: "D1-Menu1.png", name: "ข้าวราดผัดกระเทียม", price: "50" },
+            { img: "D1-Menu2.png", name: "ข้าวผัดโบราณ", price: "50" },
+            { img: "D1-Menu3.png", name: "ข้าวราดผัดน้ำมันหอย", price: "50" },
+            { img: "D1-Menu5.png", name: "ข้าวราดผัดผงกะหรี่", price: "50" },
+            { img: "D1-Menu4.png", name: "ราดหน้า", price: "50" },
+            { img: "D1-Menu6.png", name: "ต้มยำ", price: "60" },
+            { img: "D1-Menu7.png", name: "แกงจืดไข่น้ำ", price: "50" }
         ],
-
         E1: [
-            { img: "E1-Menu1.png", name: "เค้กช็อกโกแลต", price: "40" },
-            { img: "E1-Menu2.png", name: "เค้กส้ม", price: "40" },
-            { img: "E1-Menu3.png", name: "บราวนี่", price: "35" }
+            { img: "E1-Menu1.png", name: "โค๊ก", price: "20" },
+            { img: "E1-Menu2.png", name: "สไปรท์", price: "20" },
+            { img: "E1-Menu3.png", name: "แฟนต้า", price: "20" },
+            { img: "E1-Menu4.png", name: "น้ำลำไย", price: "35" },
+            { img: "E1-Menu5.png", name: "น้ำเก๊กฮวย", price: "30" },
         ],
         E2: [
-            { img: "E2-Menu1.png", name: "ไอศกรีมวนิลา", price: "30" },
-            { img: "E2-Menu2.png", name: "ไอศกรีมช็อกโกแลต", price: "30" },
-            { img: "E2-Menu3.png", name: "ไอศกรีมสตรอว์เบอร์รี่", price: "30" }
+            { img: "E2-Menu1.png", name: "บลูฮาวายโซดา", price: "20" },
+            { img: "E2-Menu2.png", name: "สตอเบอรี่โซดา", price: "20" },
+            { img: "E2-Menu3.png", name: "ชาเย็น", price: "25" },
+            { img: "E2-Menu4.png", name: "ชาเขียว", price: "25" },
+            { img: "E2-Menu5.png", name: "โกโก้", price: "25" },
+            { img: "E2-Menu6.png", name: "นมเย็น", price: "25" },
         ],
 
         F1: [
-            { img: "F1-Menu1.png", name: "ส้มตำปู", price: "45" },
-            { img: "F1-Menu2.png", name: "ส้มตำไทยไข่เค็ม", price: "50" },
-            { img: "F1-Menu3.png", name: "ส้มตำปูม้า", price: "60" }
+            { img: "F1-option1.png", name: "ถ้วย", price: "30" },
+            { img: "F1-option2.png", name: "โคน", price: "20" },
+            { img: "F1-Menu1.png", name: "วานิลา", price: "-" },
+            { img: "F1-Menu2.png", name: "มะนาว", price: "-" },
+            { img: "F1-Menu3.png", name: "กะทิรวมมิตร", price: "-" },
+            { img: "F1-Menu4.png", name: "ช็อคโกแลต", price: "-" },
+            { img: "F1-Menu5.png", name: "เผือก", price: "-" },
+            { img: "F1-Menu6.png", name: "โอริโอ้", price: "-" },
+            { img: "F1-Menu7.png", name: "เรนโบว์", price: "-" },
+            { img: "F1-Menu8.png", name: "คาปูชิโน่", price: "-" }
         ],
         F2: [
-            { img: "F2-Menu1.png", name: "ลาบหมู", price: "50" },
-            { img: "F2-Menu2.png", name: "ลาบไก่", price: "50" },
-            { img: "F2-Menu3.png", name: "น้ำตกหมู", price: "55" },
-            { img: "F2-Menu4.png", name: "น้ำตกหมู", price: "55" },
-            { img: "F2-Menu5.png", name: "วาฟเฟิลช็อคโกแลต", price: "55" }
+            { img: "F2-Menu1.png", name: "ออริจินอล", price: "10" },
+            { img: "F2-Menu2.png", name: "อัลมอนด์", price: "10" },
+            { img: "F2-Menu3.png", name: "ผลไม้รวม", price: "10" },
+            { img: "F2-Menu4.png", name: "ลูกเกด", price: "10" },
+            { img: "F2-Menu5.png", name: "ช็อคโกแลต", price: "10" }
         ]
     };
 
