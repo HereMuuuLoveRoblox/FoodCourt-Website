@@ -281,6 +281,34 @@ Footer {
     }
 }
 
+/* Macbook 14inch Responsive */
+@media (max-width: 1600px) {
+    Footer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .footer-left {
+        grid-column: span 6;
+        justify-content: center;
+    }
+    .footer-mid {
+        grid-column: span 3;
+        grid-row-start: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-right {
+        grid-column: span 3;
+        grid-column-start: 4;
+        grid-row-start: 2;
+        width: 100%;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
+
 @media (max-width: 768px) {
 
     main,
