@@ -4,6 +4,7 @@
 .main-title{
     text-align: center;
     color: var(--main-color);
+    margin-bottom: 10px;
 }
 .header-text-popular-category{
     text-align: center;
@@ -94,8 +95,8 @@
 .contact-content{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 0 100px;
+    justify-content: center;
+    gap: 70px;
 }
 
 .contact-img{
@@ -165,23 +166,6 @@
     transform: scale(1.1);
     opacity: 0.5;
 }
-
-@media (max-width: 1600px) {
-    .contact-img{
-        position: relative;
-        width: 80%;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 0px 4px 15px rgba(0,0,0,.5);
-        overflow: hidden;  
-        background-color: black;  
-        transition: transform 2s ease, box-shadow 0.5s ease, border-radius 2s ease;     
-    }
-    .img-profile {
-        width: 100%;
-        height: auto;
-    }
-} 
 
 @media (max-width: 1370px) {
     .popular-category{
