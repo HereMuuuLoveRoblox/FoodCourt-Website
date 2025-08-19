@@ -211,6 +211,7 @@ Footer {
     padding: 50px;
     animation: slide-in 1s ease-out forwards;
     transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    justify-content: center;
 }
 
 .back-page-btn{
@@ -281,6 +282,7 @@ Footer {
     }
 }
 
+<<<<<<< HEAD
 /* Macbook 14inch Responsive */
 @media (max-width: 1600px) {
     Footer {
@@ -306,6 +308,24 @@ Footer {
         width: 100%;
         justify-content: center;
         white-space: nowrap;
+=======
+/* Ipad */
+@media (max-width: 1200px) {
+
+    /* Footer */
+    Footer {
+        display: block;
+    }
+    .footer-left{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .footer-left img {
+        margin: 15px 0;
+    }
+    .footer-mid{
+        margin: 15px 0;
+>>>>>>> main
     }
 }
 
@@ -340,10 +360,6 @@ Footer {
     .sidebar .menu {
         margin-left: 0;
     }
-
-    
-
-
 
     .sidebar .menu ul li a,
     .food-category-btn,

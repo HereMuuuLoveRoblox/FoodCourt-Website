@@ -195,6 +195,45 @@
     }
 }
 
+/* Ipad */
+@media (max-width: 1200px) {
+    .contact-content{
+        display: block;
+        
+    }
+
+    .contact-img{
+        margin: 15px 0px 50px 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-line-center{
+        display: none;
+    }
+
+    .img-profile{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.03);
+    }
+
+    .github-wrapper{
+        position: absolute;
+        left: 0;
+        top: 100px;
+        opacity: 1;                 /* ซ่อนก่อน */
+    }
+
+   .img-github {
+        filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+    }
+
+    .github-text {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+}
+
 /* responsive */
 @media (max-width: 768px) {
     .main-title{

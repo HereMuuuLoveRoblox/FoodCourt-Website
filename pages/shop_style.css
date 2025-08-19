@@ -62,8 +62,10 @@
 /* End Main */
 
 /* responsive */
-@media (max-width: 1834px) {
-    
+@media (max-width: 1200px) {
+    .main-content {
+        justify-content: center; /* ชิดซ้ายถ้าไม่เต็ม */
+    }
 }
 
 @media (max-width: 768px) {
