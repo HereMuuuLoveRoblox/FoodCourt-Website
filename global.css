@@ -282,7 +282,6 @@ Footer {
     }
 }
 
-<<<<<<< HEAD
 /* Macbook 14inch Responsive */
 @media (max-width: 1600px) {
     Footer {
@@ -308,7 +307,8 @@ Footer {
         width: 100%;
         justify-content: center;
         white-space: nowrap;
-=======
+    }
+}
 /* Ipad */
 @media (max-width: 1200px) {
 
@@ -325,7 +325,6 @@ Footer {
     }
     .footer-mid{
         margin: 15px 0;
->>>>>>> main
     }
 }
 
