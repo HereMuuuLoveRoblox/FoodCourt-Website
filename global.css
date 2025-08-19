@@ -284,7 +284,8 @@ Footer {
 
 /* Macbook 14inch Responsive */
 @media (max-width: 1600px) {
-    Footer {
+    
+    footer {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -314,7 +315,8 @@ Footer {
 
     main,
     .content-wrapper,
-    Footer {
+
+    footer {
         margin-left: 0;
     }
 
