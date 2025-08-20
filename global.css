@@ -46,7 +46,6 @@ main,
 }
 
 /* Sidebar */
-
 .sidebar {
     z-index: 1000;
     position: fixed;
@@ -214,6 +213,14 @@ Footer {
     justify-content: center;
 }
 
+/* index , contact */
+.main-title{
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+
 .back-page-btn{
     margin-bottom: 20px;
     display: flex;
@@ -330,7 +337,13 @@ Footer {
     }
 }
 
+
 @media (max-width: 768px) {
+
+    .main-title{
+        white-space: pre-line;
+        font-size: 25px;
+    }
 
     main,
     .content-wrapper,

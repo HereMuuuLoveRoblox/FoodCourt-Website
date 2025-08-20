@@ -1,0 +1,40 @@
+
+.aboutinfo{
+    text-align: center;
+}
+
+.aboutpage .aboutinfo h1{
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.aboutinfo-text{
+    font-size: 20px;
+}
+.aboutpage .aboutinfo ul {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aboutpage .aboutinfo ul li{
+    margin-left: 5rem;
+}
+
+.aboutpage .aboutinfo .aboutme {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .aboutpage .aboutinfo ul li{
+        margin-left: 0rem;
+        padding: 0.5rem;
+    }
+
+    .aboutinfo-text{
+        font-size: 16px;
+    }
+}
